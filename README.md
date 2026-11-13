@@ -11,6 +11,7 @@ Open an issue and comment `@nikltesttt-boop <request>` to give the agent a task.
 ### 环境要求
 
 - Node.js 20.19+ 或 22.12+（当前使用 Node 24）
+- `npm test` 直接运行 TypeScript 测试文件，需要 Node.js 22.18+ 或 24（Node 20 可运行 `npm run dev` / `npm run build`，但无法执行该测试命令）
 
 ### 常用命令
 
