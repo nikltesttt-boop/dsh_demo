@@ -72,6 +72,38 @@ body {
   font-size: 17px;
 }
 
+.time-control {
+  margin-top: 28px;
+}
+
+.time-button {
+  padding: 10px 22px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #ffffff;
+  font: inherit;
+  font-size: 15px;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.time-button:hover {
+  opacity: 0.88;
+}
+
+.time-button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.time-display {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+  font-variant-numeric: tabular-nums;
+}
+
 .cards {
   display: grid;
   gap: 16px;

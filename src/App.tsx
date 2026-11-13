@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 const highlights = [
   {
     title: 'Vite 构建',
@@ -14,6 +16,12 @@ const highlights = [
 ]
 
 export function App() {
+  const [currentTime, setCurrentTime] = useState<string | null>(null)
+
+  const showCurrentTime = () => {
+    setCurrentTime(new Date().toLocaleString())
+  }
+
   return (
     <div className="page">
       <header className="hero">
@@ -22,6 +30,14 @@ export function App() {
         <p className="subtitle">
           一个新的前端项目脚手架已经跑起来，这里就是首页。
         </p>
+        <div className="time-control">
+          <button type="button" className="time-button" onClick={showCurrentTime}>
+            显示当前时间
+          </button>
+          <p className="time-display" role="status" aria-live="polite">
+            {currentTime === null ? '点击按钮查看当前时间' : `当前时间：${currentTime}`}
+          </p>
+        </div>
       </header>
 
       <main>
