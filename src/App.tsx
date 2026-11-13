@@ -1,3 +1,5 @@
+import SnakeGame from './snake/SnakeGame'
+
 const highlights = [
   {
     title: 'Vite 构建',
@@ -8,8 +10,8 @@ const highlights = [
     description: '使用 React 19 + TypeScript 编写页面组件，类型检查随构建一起运行。',
   },
   {
-    title: '首页可查看',
-    description: 'npm run dev 后打开首页即可看到当前页面，作为后续功能的起点。',
+    title: '贪吃蛇游戏',
+    description: '页面内置可直接上手的网页版贪吃蛇：方向键 / WASD 操作，得分实时统计。',
   },
 ]
 
@@ -18,13 +20,15 @@ export function App() {
     <div className="page">
       <header className="hero">
         <p className="badge">Web 项目框架</p>
-        <h1>DSH Demo</h1>
+        <h1>贪吃蛇</h1>
         <p className="subtitle">
-          一个新的前端项目脚手架已经跑起来，这里就是首页。
+          网页版贪吃蛇：方向键或 WASD 控制方向，吃到食物即可得分，速度会随得分逐渐加快。
         </p>
       </header>
 
       <main>
+        <SnakeGame />
+
         <section className="cards" aria-label="项目能力">
           {highlights.map((item) => (
             <article className="card" key={item.title}>
